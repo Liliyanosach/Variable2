@@ -114,23 +114,24 @@ public class Main {
         System.out.println("Задача 7");
         byte weight = 7;
         int weightGram = weight * 1000;
-        short loseWeightMin = 250;
-        short loseWeightMax = 500;
-        int dayLoseWeight = weightGram / loseWeightMin;
-        int dayLoseWeightBig = weightGram / loseWeightMax;
+        int loseWeightMin = 250;
+        int loseWeightMax = 500;
+        double dayLoseWeight = (double) weightGram / loseWeightMin;
+        double dayLoseWeightBig = (double) weightGram / loseWeightMax;
         System.out.println("Спортсмену потребуется " + dayLoseWeight + " дней, при потере 250 грамм в день");
         System.out.println("Спортсмену потребуется " + dayLoseWeightBig + " дней, при потере 500 грамм в день");
         double average = 2d;
-        int totalDays = dayLoseWeight + dayLoseWeightBig;
+        double totalDays = loseWeightMin +loseWeightMax;
         double averageDays = totalDays / average;
-        System.out.println("Спортсмену в среднем понадобится " + averageDays + " день");
+        double averageDay = weightGram / averageDays;
+        System.out.println("Спортсмену в среднем понадобится " + averageDay + " день");
     }
 
     private static void task8(){
         System.out.println("Задача 8");
-        int salaryMasha = 67760;
-        int salaryDenis = 83690;
-        int salaryCris = 76230;
+        int salaryMasha = 67_760;
+        int salaryDenis = 83_690;
+        int salaryCris = 76_230;
 
         int salaryYearMasha = salaryMasha * 12;
         int salaryYearDenis = salaryDenis * 12;
